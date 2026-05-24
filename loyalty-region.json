@@ -59,9 +59,9 @@
       "phoneCode": "+60"
     },
     {
-      "code": "IN",
-      "name": "India",
-      "apiUrl": "https://in.zentrapos.com",
+      "code": "NP",
+      "name": "Nepal",
+      "apiUrl": "https://np.zentrapos.com",
       "currency": "INR",
       "phoneCode": "+91"
     },
