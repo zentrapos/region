@@ -1,8 +1,3 @@
-Yes, keep postcode manual. Your GitHub JSON can hold only countries plus their state/province/region list.
-
-Use this as the full updated `loyalty-region.json`:
-
-```json
 {
   "version": 2,
   "defaultRegion": "AU",
