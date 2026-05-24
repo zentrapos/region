@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "defaultRegion": "AU",
+  "regions": [
+    {
+      "code": "AU",
+      "name": "Australia",
+      "apiUrl": "https://loyalty.zentrapos.com",
+      "currency": "AUD",
+      "phoneCode": "+61"
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "apiUrl": "https://us.zentrapos.com",
+      "currency": "USD",
+      "phoneCode": "+1"
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "apiUrl": "https://nz.zentrapos.com",
+      "currency": "NZD",
+      "phoneCode": "+64"
+    },
+    {
+      "code": "CA",
+      "name": "Canada",
+      "apiUrl": "https://ca.zentrapos.com",
+      "currency": "CAD",
+      "phoneCode": "+1"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom",
+      "apiUrl": "https://gb.zentrapos.com",
+      "currency": "GBP",
+      "phoneCode": "+44"
+    },
+    {
+      "code": "IE",
+      "name": "Ireland",
+      "apiUrl": "https://ie.zentrapos.com",
+      "currency": "EUR",
+      "phoneCode": "+353"
+    },
+    {
+      "code": "SG",
+      "name": "Singapore",
+      "apiUrl": "https://sg.zentrapos.com",
+      "currency": "SGD",
+      "phoneCode": "+65"
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "apiUrl": "https://my.zentrapos.com",
+      "currency": "MYR",
+      "phoneCode": "+60"
+    },
+    {
+      "code": "IN",
+      "name": "India",
+      "apiUrl": "https://in.zentrapos.com",
+      "currency": "INR",
+      "phoneCode": "+91"
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates",
+      "apiUrl": "https://ae.zentrapos.com",
+      "currency": "AED",
+      "phoneCode": "+971"
+    }
+  ]
+}
