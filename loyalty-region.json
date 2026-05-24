@@ -1,5 +1,10 @@
+Yes, keep postcode manual. Your GitHub JSON can hold only countries plus their state/province/region list.
+
+Use this as the full updated `loyalty-region.json`:
+
+```json
 {
-  "version": 1,
+  "version": 2,
   "defaultRegion": "AU",
   "regions": [
     {
@@ -7,70 +12,261 @@
       "name": "Australia",
       "apiUrl": "https://loyalty.zentrapos.com",
       "currency": "AUD",
-      "phoneCode": "+61"
+      "phoneCode": "+61",
+      "subdivisionLabel": "State",
+      "postCodeLabel": "Postcode",
+      "postCodeMaxLength": 4,
+      "postCodeInputMode": "numeric",
+      "states": [
+        { "code": "NSW", "name": "New South Wales" },
+        { "code": "VIC", "name": "Victoria" },
+        { "code": "QLD", "name": "Queensland" },
+        { "code": "SA", "name": "South Australia" },
+        { "code": "WA", "name": "Western Australia" },
+        { "code": "TAS", "name": "Tasmania" },
+        { "code": "ACT", "name": "Australian Capital Territory" },
+        { "code": "NT", "name": "Northern Territory" }
+      ]
     },
     {
       "code": "US",
       "name": "United States",
       "apiUrl": "https://us.zentrapos.com",
       "currency": "USD",
-      "phoneCode": "+1"
+      "phoneCode": "+1",
+      "subdivisionLabel": "State",
+      "postCodeLabel": "ZIP code",
+      "postCodeMaxLength": 5,
+      "postCodeInputMode": "numeric",
+      "states": [
+        { "code": "AL", "name": "Alabama" },
+        { "code": "AK", "name": "Alaska" },
+        { "code": "AZ", "name": "Arizona" },
+        { "code": "AR", "name": "Arkansas" },
+        { "code": "CA", "name": "California" },
+        { "code": "CO", "name": "Colorado" },
+        { "code": "CT", "name": "Connecticut" },
+        { "code": "DE", "name": "Delaware" },
+        { "code": "FL", "name": "Florida" },
+        { "code": "GA", "name": "Georgia" },
+        { "code": "HI", "name": "Hawaii" },
+        { "code": "ID", "name": "Idaho" },
+        { "code": "IL", "name": "Illinois" },
+        { "code": "IN", "name": "Indiana" },
+        { "code": "IA", "name": "Iowa" },
+        { "code": "KS", "name": "Kansas" },
+        { "code": "KY", "name": "Kentucky" },
+        { "code": "LA", "name": "Louisiana" },
+        { "code": "ME", "name": "Maine" },
+        { "code": "MD", "name": "Maryland" },
+        { "code": "MA", "name": "Massachusetts" },
+        { "code": "MI", "name": "Michigan" },
+        { "code": "MN", "name": "Minnesota" },
+        { "code": "MS", "name": "Mississippi" },
+        { "code": "MO", "name": "Missouri" },
+        { "code": "MT", "name": "Montana" },
+        { "code": "NE", "name": "Nebraska" },
+        { "code": "NV", "name": "Nevada" },
+        { "code": "NH", "name": "New Hampshire" },
+        { "code": "NJ", "name": "New Jersey" },
+        { "code": "NM", "name": "New Mexico" },
+        { "code": "NY", "name": "New York" },
+        { "code": "NC", "name": "North Carolina" },
+        { "code": "ND", "name": "North Dakota" },
+        { "code": "OH", "name": "Ohio" },
+        { "code": "OK", "name": "Oklahoma" },
+        { "code": "OR", "name": "Oregon" },
+        { "code": "PA", "name": "Pennsylvania" },
+        { "code": "RI", "name": "Rhode Island" },
+        { "code": "SC", "name": "South Carolina" },
+        { "code": "SD", "name": "South Dakota" },
+        { "code": "TN", "name": "Tennessee" },
+        { "code": "TX", "name": "Texas" },
+        { "code": "UT", "name": "Utah" },
+        { "code": "VT", "name": "Vermont" },
+        { "code": "VA", "name": "Virginia" },
+        { "code": "WA", "name": "Washington" },
+        { "code": "WV", "name": "West Virginia" },
+        { "code": "WI", "name": "Wisconsin" },
+        { "code": "WY", "name": "Wyoming" },
+        { "code": "DC", "name": "District of Columbia" }
+      ]
     },
     {
       "code": "NZ",
       "name": "New Zealand",
       "apiUrl": "https://nz.zentrapos.com",
       "currency": "NZD",
-      "phoneCode": "+64"
+      "phoneCode": "+64",
+      "subdivisionLabel": "Region",
+      "postCodeLabel": "Postcode",
+      "postCodeMaxLength": 4,
+      "postCodeInputMode": "numeric",
+      "states": [
+        { "code": "Auckland", "name": "Auckland" },
+        { "code": "Bay of Plenty", "name": "Bay of Plenty" },
+        { "code": "Canterbury", "name": "Canterbury" },
+        { "code": "Gisborne", "name": "Gisborne" },
+        { "code": "Hawke's Bay", "name": "Hawke's Bay" },
+        { "code": "Manawatu-Wanganui", "name": "Manawatu-Wanganui" },
+        { "code": "Marlborough", "name": "Marlborough" },
+        { "code": "Nelson", "name": "Nelson" },
+        { "code": "Northland", "name": "Northland" },
+        { "code": "Otago", "name": "Otago" },
+        { "code": "Southland", "name": "Southland" },
+        { "code": "Taranaki", "name": "Taranaki" },
+        { "code": "Tasman", "name": "Tasman" },
+        { "code": "Waikato", "name": "Waikato" },
+        { "code": "Wellington", "name": "Wellington" },
+        { "code": "West Coast", "name": "West Coast" }
+      ]
     },
     {
       "code": "CA",
       "name": "Canada",
       "apiUrl": "https://ca.zentrapos.com",
       "currency": "CAD",
-      "phoneCode": "+1"
+      "phoneCode": "+1",
+      "subdivisionLabel": "Province",
+      "postCodeLabel": "Postal code",
+      "postCodeMaxLength": 7,
+      "postCodeInputMode": "text",
+      "states": [
+        { "code": "AB", "name": "Alberta" },
+        { "code": "BC", "name": "British Columbia" },
+        { "code": "MB", "name": "Manitoba" },
+        { "code": "NB", "name": "New Brunswick" },
+        { "code": "NL", "name": "Newfoundland and Labrador" },
+        { "code": "NS", "name": "Nova Scotia" },
+        { "code": "NT", "name": "Northwest Territories" },
+        { "code": "NU", "name": "Nunavut" },
+        { "code": "ON", "name": "Ontario" },
+        { "code": "PE", "name": "Prince Edward Island" },
+        { "code": "QC", "name": "Quebec" },
+        { "code": "SK", "name": "Saskatchewan" },
+        { "code": "YT", "name": "Yukon" }
+      ]
     },
     {
       "code": "GB",
       "name": "United Kingdom",
       "apiUrl": "https://gb.zentrapos.com",
       "currency": "GBP",
-      "phoneCode": "+44"
+      "phoneCode": "+44",
+      "subdivisionLabel": "Nation",
+      "postCodeLabel": "Postcode",
+      "postCodeMaxLength": 8,
+      "postCodeInputMode": "text",
+      "states": [
+        { "code": "ENG", "name": "England" },
+        { "code": "SCT", "name": "Scotland" },
+        { "code": "WLS", "name": "Wales" },
+        { "code": "NIR", "name": "Northern Ireland" }
+      ]
     },
     {
       "code": "IE",
       "name": "Ireland",
       "apiUrl": "https://ie.zentrapos.com",
       "currency": "EUR",
-      "phoneCode": "+353"
+      "phoneCode": "+353",
+      "subdivisionLabel": "Province",
+      "postCodeLabel": "Eircode",
+      "postCodeMaxLength": 8,
+      "postCodeInputMode": "text",
+      "states": [
+        { "code": "Connacht", "name": "Connacht" },
+        { "code": "Leinster", "name": "Leinster" },
+        { "code": "Munster", "name": "Munster" },
+        { "code": "Ulster", "name": "Ulster" }
+      ]
     },
     {
       "code": "SG",
       "name": "Singapore",
       "apiUrl": "https://sg.zentrapos.com",
       "currency": "SGD",
-      "phoneCode": "+65"
+      "phoneCode": "+65",
+      "subdivisionLabel": "Area",
+      "postCodeLabel": "Postal code",
+      "postCodeMaxLength": 6,
+      "postCodeInputMode": "numeric",
+      "states": [
+        { "code": "Central", "name": "Central" },
+        { "code": "East", "name": "East" },
+        { "code": "North", "name": "North" },
+        { "code": "North-East", "name": "North-East" },
+        { "code": "West", "name": "West" }
+      ]
     },
     {
       "code": "MY",
       "name": "Malaysia",
       "apiUrl": "https://my.zentrapos.com",
       "currency": "MYR",
-      "phoneCode": "+60"
+      "phoneCode": "+60",
+      "subdivisionLabel": "State",
+      "postCodeLabel": "Postcode",
+      "postCodeMaxLength": 5,
+      "postCodeInputMode": "numeric",
+      "states": [
+        { "code": "Johor", "name": "Johor" },
+        { "code": "Kedah", "name": "Kedah" },
+        { "code": "Kelantan", "name": "Kelantan" },
+        { "code": "Kuala Lumpur", "name": "Kuala Lumpur" },
+        { "code": "Labuan", "name": "Labuan" },
+        { "code": "Melaka", "name": "Melaka" },
+        { "code": "Negeri Sembilan", "name": "Negeri Sembilan" },
+        { "code": "Pahang", "name": "Pahang" },
+        { "code": "Penang", "name": "Penang" },
+        { "code": "Perak", "name": "Perak" },
+        { "code": "Perlis", "name": "Perlis" },
+        { "code": "Putrajaya", "name": "Putrajaya" },
+        { "code": "Sabah", "name": "Sabah" },
+        { "code": "Sarawak", "name": "Sarawak" },
+        { "code": "Selangor", "name": "Selangor" },
+        { "code": "Terengganu", "name": "Terengganu" }
+      ]
     },
     {
       "code": "NP",
       "name": "Nepal",
       "apiUrl": "https://np.zentrapos.com",
-      "currency": "INR",
-      "phoneCode": "+91"
+      "currency": "NPR",
+      "phoneCode": "+977",
+      "subdivisionLabel": "Province",
+      "postCodeLabel": "Postal code",
+      "postCodeMaxLength": 5,
+      "postCodeInputMode": "numeric",
+      "states": [
+        { "code": "Koshi", "name": "Koshi" },
+        { "code": "Madhesh", "name": "Madhesh" },
+        { "code": "Bagmati", "name": "Bagmati" },
+        { "code": "Gandaki", "name": "Gandaki" },
+        { "code": "Lumbini", "name": "Lumbini" },
+        { "code": "Karnali", "name": "Karnali" },
+        { "code": "Sudurpashchim", "name": "Sudurpashchim" }
+      ]
     },
     {
       "code": "AE",
       "name": "United Arab Emirates",
       "apiUrl": "https://ae.zentrapos.com",
       "currency": "AED",
-      "phoneCode": "+971"
+      "phoneCode": "+971",
+      "subdivisionLabel": "Emirate",
+      "postCodeLabel": "Area code",
+      "postCodeMaxLength": 8,
+      "postCodeInputMode": "text",
+      "states": [
+        { "code": "Abu Dhabi", "name": "Abu Dhabi" },
+        { "code": "Dubai", "name": "Dubai" },
+        { "code": "Sharjah", "name": "Sharjah" },
+        { "code": "Ajman", "name": "Ajman" },
+        { "code": "Umm Al Quwain", "name": "Umm Al Quwain" },
+        { "code": "Ras Al Khaimah", "name": "Ras Al Khaimah" },
+        { "code": "Fujairah", "name": "Fujairah" }
+      ]
     }
   ]
 }
